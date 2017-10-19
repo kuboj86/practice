@@ -10,27 +10,19 @@ namespace Practice
     {
         static void Main(string[] args)
         {
-            int number = numberOne ("Please enter a number between 1-10.");
-
-            if (number > 0 && number < 10)
-                Console.WriteLine("Valid");
-            else
+            for (var i = 1; i <= 20; i++)
             {
-                Console.WriteLine("Invalid");
+                if (i % 3 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
-        }
-        private static int numberOne(string message)
-        {
-            Console.WriteLine(message);
-            string input = Console.ReadLine();
-            int number;
-            if(Int32.TryParse(input, out number))
+            for (var i =20; i >=1; i--)
             {
-                return number;
-            }
-            else
-            {
-                return numberOne("please enter a valid number");
+                if(i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
         }
     }
